@@ -10,6 +10,7 @@
   width: 100%;
 }
 .banner:after {
+  display: none;
   content: url(../images/icons/icon-mouse.png);
   position: absolute;
   height: 1.9em;
@@ -17,10 +18,17 @@
   bottom: 0;
   left: calc(50% - 1.1em/2);
   animation: icon-scroll 1s infinite ease-out alternate both;
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
 }
 
 .carousel {
-  padding: 25vh 5vw;
+  margin: 0 auto;
+  padding: 10vh 5vh;
+  @include media-breakpoint-up(md) {
+    padding: 25vh 5vw;
+  }
   & h1 {
     font-size: 2.7em;
     font-weight: bold;
