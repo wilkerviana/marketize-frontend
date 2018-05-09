@@ -1,27 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Asap:400,400i,500,500i,600,600i,700,700i|Catamaran:300,400,500,600,700,800');
+@import 'assets/_bootstrap-custom';
 
-body {
-  font-family: 'Catamaran', sans-serif;
-}
+@import 'base/_reset';
+@import 'base/_fonts';
+@import 'base/_variables';
 
-.foo-banner {
-  padding: 1em 0;
-  background-image: url(../images/backgrounds/bg-carts_blue.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-}
+@import 'components/_animations';
+@import 'components/_menu';
+@import 'components/_titles';
+@import 'components/_texts';
+@import 'components/_buttons';
 
-// Apagar grid
-[class*="col"] {
-  background: rgba(255,255,255,.1);
-}
+@import 'modules/_banner';
+@import 'modules/_how_it_works';
+@import 'modules/_benefits';
+@import 'modules/_footer';
 
-.nav-link {
-  color: white;
-  font-family: 'Asap',sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-}

@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+// Apagar grid
+// [class*="col"] {
+//   background: rgba(0,0,0,.1);
+// }
+
+body {
+  font-family: 'Catamaran', sans-serif;
+  font-size: medium;
+}
+
+.foo {
+  padding: 10vh 0;
+}

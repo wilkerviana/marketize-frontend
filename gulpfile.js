@@ -33,7 +33,7 @@ gulp.task('bs', function(){
 });
 
 gulp.task('style',() => {
-  gulp.src(['node_modules/bootstrap/scss/bootstrap.scss','src/styles/**/*'])
+  gulp.src('src/styles/main.scss')
       .pipe(sourcemap.init())
       .pipe(plumber({
         handleError: function(error){

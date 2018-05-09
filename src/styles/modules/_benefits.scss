@@ -1,0 +1,75 @@
+.benefits {
+  background: url(../images/backgrounds/bg-orange-icons.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.list-benefits {
+  list-style: none;
+  padding: 0;
+  & li {
+    font-size: 1.125em;
+    font-weight: 600;
+    margin-top: 1.125em;
+    padding-left: 1em;
+    position: relative;
+    &:first-child{
+      margin-top: 0;
+    }
+    &:before {
+      background: $blue-darkest;
+      border-radius: 50%;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: .5em;
+      height: .6em;
+      width: .6em;
+    }
+  }
+}
+
+.mockup {
+  display: block;
+  margin: 0 auto -12em;
+  position: relative;
+  top: -15em;
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    left: calc(50% - 300px/2);
+    top: -15em;
+  }
+}
+
+.text-highlight {
+  font-size: 1.575em;
+  font-weight: 600;
+  margin-top: 1.6em;
+  @include media-breakpoint-up(md) {
+    text-align: right;
+  }
+  & span {
+    color: $blue-darkest;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  & + span {
+    display: block;
+    font-size: .925em;
+    font-style: italic;
+    margin-top: 2em;
+    text-align: right;
+  }
+}
+
+.benefits-description {
+  margin-top: 5em;
+  text-align: center;
+  @include media-breakpoint-up(md) {
+    margin-top: 8em;
+  }
+}
