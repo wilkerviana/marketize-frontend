@@ -1,0 +1,11 @@
+.newsletter {
+  & .title {
+    color: $yellow-darkest;
+  }
+  & .text {
+    color: $blue-lightest;
+  }
+  & form {
+    margin-top: 2em;
+  }
+}

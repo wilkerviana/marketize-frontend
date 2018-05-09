@@ -1,0 +1,45 @@
+.how_it_works {
+  background: $blue-darkest;
+  color: white;
+  padding-bottom: 15em;
+  position: relative;
+  & .title {
+    text-align: center;
+  }
+  &:before , &:after {
+    content: url(../images/backgrounds/pattern-bullets.png);
+    position: absolute;
+    height: 640px;
+    width: 310px;
+    z-index: 1;
+  }
+  &:before {
+    bottom: -20%;
+  }
+  &:after {
+    bottom: -60%;
+    right: 5%;
+  }
+}
+
+.definition {
+  & .icon {
+    border-radius: 50%;
+    margin: 3em auto;
+    padding: 2.6em 3.2em;
+    height: 12em;
+    width: 12em;
+  }
+  &:nth-child(2) .icon {
+    background: $yellow-darkest;
+  }
+  &:nth-child(3) .icon {
+    background: $blue-lightest;
+  }
+  &:nth-child(4) .icon {
+    background: $yellow-darkest;
+  }
+  & .text {
+    text-align: center;
+  }
+}

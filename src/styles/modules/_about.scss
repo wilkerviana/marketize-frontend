@@ -1,0 +1,11 @@
+.about {
+  & .title {
+    color: $orange-lightest;
+  }
+  & .text {
+    color: $blue-darkest;
+    font-family: $asap-font;
+    font-style: italic;
+    line-height: 1.625em;
+  }
+}

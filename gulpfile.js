@@ -5,7 +5,7 @@ var gulp      = require('gulp'),
     concat    = require('gulp-concat'),
     minify    = require('gulp-minify'),
     rename    = require('gulp-rename'),
-    cleanCss    = require('gulp-clean-css'),
+    cleanCss  = require('gulp-clean-css'),
     prefixer  = require('gulp-autoprefixer'),
     sourcemap = require('gulp-sourcemaps'),
     styleglob = require('gulp-sass-glob'),
@@ -33,7 +33,7 @@ gulp.task('bs', function(){
 });
 
 gulp.task('style',() => {
-  gulp.src(['node_modules/bootstrap/scss/bootstrap.scss','src/styles/**/*'])
+  gulp.src('src/styles/main.scss')
       .pipe(sourcemap.init())
       .pipe(plumber({
         handleError: function(error){

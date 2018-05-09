@@ -1,0 +1,12 @@
+.social-icons {
+  display: block;
+  margin: 0 auto;
+  width: 105px;
+  @include media-breakpoint-up(md) {
+    margin: 0;
+  }
+  & .social-link {
+    display: inline-block;
+    margin: 0 .625em;
+  }
+}

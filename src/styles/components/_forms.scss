@@ -1,0 +1,24 @@
+.form-group{
+  & label {
+    color: $purple-darkest;
+  }
+  & input {
+    background: #f6f6f6;
+    border: 0;
+    color: $blue-darkest;
+    font-size: 1em;
+  }
+  & small {
+    font-family: $asap-font;
+    font-size: .8em;
+    font-style: italic;
+  }
+}
+.btn-form {
+  background: $blue-lightest;
+  color: white;
+  @extend .btn-expand;
+  &:hover {
+    background: $blue-darkest;
+  }
+}

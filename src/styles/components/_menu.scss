@@ -1,0 +1,9 @@
+.nav-link {
+  color: white;
+  font-family: $asap-font;
+  font-weight: 600;
+  text-transform: uppercase;
+  &:hover {
+    color: $yellow-lightest;
+  }
+}
