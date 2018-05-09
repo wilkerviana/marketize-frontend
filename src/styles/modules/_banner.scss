@@ -1,6 +1,6 @@
 .banner {
   color: white;
-  padding: 1em 0;
+  padding: 2.5em 0;
   background-image: url(../images/backgrounds/bg-carts_blue.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -18,7 +18,6 @@
   left: calc(50% - 1.1em/2);
   animation: icon-scroll 1s infinite ease-out alternate both;
 }
-
 
 .carousel {
   padding: 25vh 5vw;
@@ -42,8 +41,4 @@
       background: $orange-lightest;
     }
   }
-}
-
-.social-link {
-  margin: 0 .525em;
 }

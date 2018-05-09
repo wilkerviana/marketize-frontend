@@ -1,0 +1,51 @@
+footer.foo {
+  background: $blue-darkest;
+  & .brand {
+    & > img {
+      display: block;
+    }
+    & span {
+      color: white;
+      display: block;
+      font-size: .8em;
+      margin: 1.6em 0;
+    }
+  }
+}
+
+.menu-footer {
+  display: inline-block;
+  margin-right: 2.6em;
+  vertical-align: top;
+  & .title-footer {
+    color: $yellow-darkest;
+    font-family: $asap-font;
+    font-size: 1em;
+    font-style: italic;
+  }
+  & ul {
+    list-style: none;
+    padding: 0;
+  }
+  & li {
+    margin-top: 1em;
+    & a {
+      color: white;
+    }
+  }
+}
+
+.btn-stores {
+  background: $purple-darkest;
+  width: 210px;
+  &:first-child{
+    margin-bottom: 2em;
+  }
+  @extend .btn-expand;
+  & a {
+    color: white;
+  }
+  & span {
+    margin-left: .8em;
+  }
+}

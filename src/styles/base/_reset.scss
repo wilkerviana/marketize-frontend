@@ -3,9 +3,9 @@
 }
 
 // Apagar grid
-// [class*="col"] {
-//   background: rgba(0,0,0,.1);
-// }
+[class*="col"] {
+  background: rgba(0,0,0,.1);
+}
 
 body {
   font-family: 'Catamaran', sans-serif;
