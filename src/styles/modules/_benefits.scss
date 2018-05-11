@@ -38,6 +38,8 @@
   margin: 0 auto -12em;
   position: relative;
   top: -15em;
+  width: 100%;
+  max-width: 300px;
   @include media-breakpoint-up(md) {
     position: absolute;
     left: calc(50% - 300px/2);

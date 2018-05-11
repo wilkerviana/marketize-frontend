@@ -85,15 +85,6 @@ gulp.task('bundlecss',() => {
       .pipe(gulp.dest('build/css'))
 });
 
-gulp.task('rename',() => {
-  gulp.src('src/*.html')
-      .pipe(rename({
-        extname: ".php"
-      }))
-      .pipe(gulp.dest('build/'))
-});
-
-
 // default task with BrowserSync
 gulp.task('default',['bs']);
-gulp.task('build',['bundlejs','bundlecss','rename','images']);
+gulp.task('build',['bundlejs','bundlecss','images']);

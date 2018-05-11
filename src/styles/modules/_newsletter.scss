@@ -7,5 +7,12 @@
   }
   & form {
     margin-top: 2em;
+    & .btn-form {
+      display: block;
+      margin: 1em auto;
+      @include media-breakpoint-up(md) {
+        margin: 0;
+      }
+    }
   }
 }

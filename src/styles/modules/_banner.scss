@@ -1,13 +1,24 @@
 .banner {
   color: white;
-  padding: 2.5em 0;
+  padding: 1.5em 0;
   background-image: url(../images/backgrounds/bg-carts_blue.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
   position: relative;
   height: 100%;
   width: 100%;
+  @include media-breakpoint-up(md) {
+    padding: 2.5em 0;
+  }
+  & .brand img{
+    max-width: 290px;
+    width: 80%;
+    @include media-breakpoint-up(md) {
+      width: 100%;
+    }
+  }
 }
 .banner:after {
   display: none;
@@ -30,8 +41,11 @@
     padding: 25vh 5vw;
   }
   & h1 {
-    font-size: 2.7em;
+    font-size: 2em;
     font-weight: bold;
+    @include media-breakpoint-up(md) {
+      font-size: 2.625em;
+    }
     & strong {
       color: $yellow-darkest;
     }
@@ -43,8 +57,12 @@
   }
   & .btn-info {
     background: $yellow-darkest;
-    margin-top: 1em;
+    display: block;
+    margin: 2em auto 1em;
     @extend .btn-fill;
+    @include media-breakpoint-up(md) {
+      margin: 1em 0;
+    }
     &:hover {
       background: $orange-lightest;
     }
