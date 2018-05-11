@@ -4,11 +4,9 @@ var gulp      = require('gulp'),
     imagemin  = require('gulp-imagemin'),
     concat    = require('gulp-concat'),
     minify    = require('gulp-minify'),
-    rename    = require('gulp-rename'),
     cleanCss  = require('gulp-clean-css'),
     prefixer  = require('gulp-autoprefixer'),
     sourcemap = require('gulp-sourcemaps'),
-    styleglob = require('gulp-sass-glob'),
     template  = require('gulp-html-replace'),
     watch     = require('gulp-watch'),
     webpack   = require('webpack-stream'),
@@ -56,10 +54,22 @@ gulp.task('view', () => {
       .pipe(gulp.dest('dist'))
 });
 
+gulp.task('buildview', () => {
+  gulp.src('src/*.html')
+      .pipe(template())
+      .pipe(gulp.dest('build'))
+});
+
 gulp.task('images',() => {
   gulp.src('src/images/**/*')
       .pipe(imagemin())
       .pipe(gulp.dest('dist/images'))
+});
+
+gulp.task('bundleimages',() => {
+  gulp.src('src/images/**/*')
+      .pipe(imagemin())
+      .pipe(gulp.dest('build/images'))
 });
 
 gulp.task('script',() => {
@@ -80,11 +90,11 @@ gulp.task('bundlejs',() => {
 });
 
 gulp.task('bundlecss',() => {
-  gulp.src('dist/css/style.css')
+  gulp.src('dist/css/main.css')
       .pipe(cleanCss())
       .pipe(gulp.dest('build/css'))
 });
 
 // default task with BrowserSync
 gulp.task('default',['bs']);
-gulp.task('build',['bundlejs','bundlecss','images']);
+gulp.task('build',['bundlejs','bundlecss','bundleimages','buildview']);
